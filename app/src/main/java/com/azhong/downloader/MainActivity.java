@@ -2,6 +2,7 @@ package com.azhong.downloader;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements OnProgressListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //<editor-fold desc="Description">
         pb = (NumberProgressBar) findViewById(R.id.pb);
         final Button start = (Button) findViewById(R.id.start);//开始下载
         final Button restart = (Button) findViewById(R.id.restart);//重新下载
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements OnProgressListene
                 start.setText("暂停下载");
             }
         });
+        //</editor-fold>
+
+        Log.e("kkk", "");
     }
 
     @Override
